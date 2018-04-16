@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<ul class="nav nav-tabs nav-justified">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#" role="tab">Profile</a>
+    </li>
+</ul>
+<div class="container card-body card">
+  <p>
+    <strong>Firstname:</strong>
+    <%= @patient.firstname %>
+  </p>
+
+  <p>
+    <strong>Lastname:</strong>
+    <%= @patient.lastname %>
+  </p>
+
+  <p>
+    <strong>Age:</strong>
+    <%= @patient.age %>
+  </p>
+
+  <p>
+    <strong>Dob:</strong>
+    <%= @patient.dob %>
+  </p>
+
+  <p>
+    <strong>Gender:</strong>
+    <%= @patient.gender %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @patient.phone %>
+  </p>
+
+  <p>
+    <strong>Free text:</strong>
+    <%= @patient.free_text %>
+  </p>
+</div>
+
+<%= link_to '<- Back', patients_path, class:"btn btn-primary btn-unique waves-effect waves-light" %>
+<%= link_to 'Edit', edit_patient_path(@patient), class:"btn btn-primary" %>

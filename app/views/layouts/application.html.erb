@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PatientListApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <br>
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+      <div class="" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+              <a class="nav-item nav-link active" src=<%= patients_path %> >Home <span class="sr-only">(current)</span></a>
+          </div>
+      </div>
+    </nav>
+    <br>
+    <%= yield %>
+    <br>
+    <footer class="footer page-footer font-small primary-color pt-4 mt-4">
+      <div class="container-fluid text-center text-md-left">
+          <div class="row">
+             <div class="col-md-6">
+                <h5 class="text-uppercase">Rockstar footer</h5>
+              </div>
+          </div>
+      </div>
+    </footer>
+  </body>
+</html>

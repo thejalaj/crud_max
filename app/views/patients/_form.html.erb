@@ -1,0 +1,46 @@
+<%= form_with(model: patient, local: true) do |form| %>
+  <% if patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container card-body card">
+
+        <%= form.label :first_name, class: "ttitle" %>
+        <%= form.text_field :firstname %>
+        <br>
+
+        <%= form.label :last_name, class: "ttitle" %>
+        <%= form.text_field :lastname %>
+        <br>
+
+        <%= form.label :age, class: "ttitle" %>
+        <%= form.number_field :age %>
+        <br>
+
+        <%= form.label :dob, class: "ttitle" %>
+        <%= form.text_field :dob %>
+        <br>
+
+        <%= form.label :gender, class: "ttitle" %>
+        <%= form.number_field :gender %>
+        <br>
+
+        <%= form.label :phone, class: "ttitle" %>
+        <%= form.text_field :phone %>
+        <br>
+
+        <%= form.label :free_text, class: "ttitle" %>
+        <%= form.text_area :free_text %>
+
+    <div class="text-center mt-4">
+      <%= form.submit "SUBMIT", class: "btn btn-success btn-block btn-rounded z-depth-1" %>
+    </div>
+  </div>
+<% end %>
