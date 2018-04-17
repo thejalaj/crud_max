@@ -30,7 +30,7 @@
           <br>
 
           <%= form.label :gender, class: "ttitle" %>
-          <%= form.select :gender, %w{Male Female}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
+          <%= form.select :gender, %w{Male Female}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control', :disabled => true %>
           <br>
 
           <%= form.label :phone, class: "ttitle" %><span class="color_me_nl" style="display: none">Length should be 10.</span>
