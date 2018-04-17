@@ -1,5 +1,20 @@
-<p id="notice"><%= notice %></p>
-<%= react_component('PatientsShow', {Patients:@patients}) %>
+
+<% if @patients.blank? %>
+  <blockquote class="blockquote bq-danger">
+    <h5 class="bq-title">There are no patients</h5>
+  </blockquote>
+<% else %>
+  <div>
+  <%= form_tag(patients_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search By Name" %>
+    <%= submit_tag "Search", :name => nil, class: "btn btn-success btn-rounded" %>
+    <button type="button" href=<%= patients_path %> class="btn btn-default btn-rounded">Default</button>
+  <% end %>
+  <%= react_component('PatientsShow', {Patients:@patients}) %>
+  </div>
+<% end %>
 <br>
 
 <%= link_to 'For Adding New Patient Click Here', new_patient_path, {class: 'btn btn-primary'} %>
+
+<p class="bottom-right" id="notice"><%= notice %></p>

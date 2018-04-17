@@ -1,9 +1,16 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
+
+
   # GET /patients
   def index
-    @patients = Patient.all
+    if params[:search]
+      search=params[:search]
+      @patients = Patient.where("firstname LIKE ?", "%#{search}%")
+    else
+      @patients = Patient.all
+    end
   end
 
   # GET /patients/1
@@ -25,6 +32,7 @@ class PatientsController < ApplicationController
 
     respond_to do |format|
       if @patient.save
+        flash[:success] = "Welcome to the Sample App!"
         format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
         format.json { render :show, status: :created, location: @patient }
       else
@@ -59,8 +67,7 @@ class PatientsController < ApplicationController
 
   private
     def set_patient
-
-      @patient = Patient.find(params[:id])
+      @patient = Patient.find(params[:id]) unless params["id"]=="search"
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
