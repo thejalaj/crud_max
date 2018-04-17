@@ -1,20 +1,17 @@
-
-<% if @patients.blank? %>
-  <blockquote class="blockquote bq-danger">
-    <h5 class="bq-title">There are no match</h5>
-  </blockquote>
-<% else %>
-  <div>
+<div>
   <%= form_tag(patients_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search By Name" %>
     <%= submit_tag "Search", :name => nil, class: "btn btn-success btn-rounded" %>
+    <%= link_to 'Clear Search', patients_path, {class: 'btn btn-primary'} %>
   <% end %>
-  <%= link_to 'Clear Search', patients_path, {class: 'btn btn-default btn-rounded'} %>
+  <% if @patients.blank? %>
+    <blockquote class="blockquote bq-danger">
+      <h5 class="bq-title">There are no match</h5>
+    </blockquote>
+  <% end %>
   <%= react_component('PatientsShow', {Patients:@patients}) %>
-  </div>
-<% end %>
+</div>
 <br>
 
 <%= link_to 'For Adding New Patient Click Here', new_patient_path, {class: 'btn btn-primary'} %>
-
 <p class="bottom-right" id="notice"><%= notice %></p>
