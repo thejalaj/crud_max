@@ -16,7 +16,7 @@ var PatientsShow = React.createClass({
               <th>Dob</th>
               <th>Gender</th>
               <th>Phone</th>
-              <th>Free text</th>
+              <th>Details</th>
               <th></th>
               <th></th>
               <th></th>
@@ -42,18 +42,10 @@ var ShowEachPatients = React.createClass({
    $.ajax({
      url: ('/patients/'+patient.id), data: data, cache: false, remote: true, method: "DELETE",
      success: function(result) {
-       toastr.options.onclick = null
-       toastr.success("editing start"+result.message)
-       quoteData.note = result.data
-       this.setState({ quoteData: quoteData });
+       alert("patient have been deleted");
      }.bind(this),
      error: function(xhr, status, err) {
-       toastr.options.onclick = null
-       message = ""
-       if (xhr.responseJSON !==undefined && xhr.responseJSON !== null)
-           message = xhr.responseJSON.message
-       var m = (message || xhr.responseText || "Unknown Error Occured, Please Reload the Page").substring(0, 100);
-       toastr.error(m,"[Failed] "+err.toString())
+       alert("error occured");
      }.bind(this)
    });
   },
