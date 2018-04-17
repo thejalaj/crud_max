@@ -14,16 +14,26 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &default
+
+production:
   adapter: postgresql
-  encoding: unicode
+  database: dd0dfvfu5poqkt
+  host: ec2-54-163-230-198.compute-1.amazonaws.com
+  pool: 20
+  timeout: 5000
+  username: oacvbsacdhcslw
+  password: cea98fbb1e36356410cb9e3235c0a6c47021f720958feb88636825f3ab6647d7
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-development:
-  <<: *default
-  database: patientListApp_development
+#development:
+#  <<: *default
+#  database: patientListApp_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
