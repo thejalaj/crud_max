@@ -1,6 +1,6 @@
 <div>
   <%= form_tag(patients_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search By Name" %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search By Name", class: "size_5_perc" %>
     <%= submit_tag "Search", :name => nil, class: "btn btn-success btn-rounded" %>
     <%= link_to 'Clear Search', patients_path, {class: 'btn btn-primary'} %>
   <% end %>
