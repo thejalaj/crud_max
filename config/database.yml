@@ -24,6 +24,14 @@ production:
   username: oacvbsacdhcslw
   password: cea98fbb1e36356410cb9e3235c0a6c47021f720958feb88636825f3ab6647d7
 
+
+development:
+  adapter: postgresql
+  database: dd0dfvfu5poqkt
+  pool: 20
+  timeout: 5000
+
+
 # default: &default
 #   adapter: postgresql
 #   encoding: unicode
@@ -65,9 +73,9 @@ production:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: patientListApp_test
+# test:
+#   <<: *default
+#   database: patientListApp_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -88,8 +96,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: patientListApp_production
-  username: patientListApp
-  password: <%= ENV['PATIENTLISTAPP_DATABASE_PASSWORD'] %>
+# production:
+#   # <<: *default
+#   database: patientListApp_production
+#   username: patientListApp
+#   password: <%= ENV['PATIENTLISTAPP_DATABASE_PASSWORD'] %>
