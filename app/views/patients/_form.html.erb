@@ -21,8 +21,8 @@
           <%= form.text_field :lastname, class: "last_name" %>
           <br>
 
-          <%= form.label :age, class: "ttitle" %>
-          <%= form.number_field :age %>
+          <%= form.label :age, class: "ttitle" %><span class="age_css" style="display: none">Patient should be above 1 year</span>
+          <%= form.number_field :age, class: "age" %>
           <br>
 
           <%= form.label :dob, class: "ttitle" %>
@@ -76,6 +76,16 @@
         if (number.length != 10) {
           $(".color_me_nl").css('background', 'red');
           $(".color_me_nl").show();
+          falsee=1;
+        }
+        else{
+          $(".color_me_nl").hide();
+        }
+
+        var age = $('.age')[0].value
+        if (age < 1) {
+          $(".age_css").css('background', 'red');
+          $(".age_css").show();
           falsee=1;
         }
         else{
