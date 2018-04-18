@@ -64,7 +64,7 @@ var ShowEachPatients = React.createClass({
         <td>{patient.firstname} </td>
         <td>{ patient.lastname }</td>
         <td>{ patient.age }</td>
-        <td>{ patient.dob }</td>
+        <td>{ patient.dobb }</td>
         <td>{ patient.gender }</td>
         <td>{ patient.phone }</td>
         <td>{ patient.free_text }</td>
