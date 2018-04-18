@@ -15,6 +15,10 @@
  *= require_tree .
  *= require_self
  */
+.flat_left_dob{
+  float: left;
+  width: 50px;
+}
 .size_5_perc {
    width:18%!important;
 }

@@ -25,8 +25,10 @@
           <%= form.number_field :age, class: "age" %>
           <br>
 
-          <%= form.label :dob, class: "ttitle" %>
-          <%= form.text_field :dob %>
+          <%= form.label :dobb, class: "ttitle" %>
+          <div class="container">
+            <%= form.date_select :dobb, :start_year=>1900, class: "flat_left_dob" %>
+          </div>
           <br>
 
           <%= form.label :gender, class: "ttitle" %>
