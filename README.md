@@ -20,7 +20,7 @@ Versioning:
 rails- 4.2.0(or above), 
 ruby 2.4.0(or above)
 
-Authors
+Author:
 Jalaj Chandnani
 
 
