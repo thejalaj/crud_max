@@ -1,24 +1,26 @@
-# README
+Project Title:
+Patient list Advance Crud application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Installation steps:
+update your bundle, 
+install postgress, 
+and you are read to go
 
-Things you may want to cover:
+Features:
+User can update, edit and delete the patient from the list, 
+proper validation(both front end and back end), 
+search feature at which find the desired patient from the list 
 
-* Ruby version
 
-* System dependencies
+Built With :
+React.js with Ruby on rails - The web framework used, 
+ActionCable - Websockets for multiple user chat rooms
 
-* Configuration
+Versioning:
+rails- 4.2.0(or above), 
+ruby 2.4.0(or above)
 
-* Database creation
+Authors
+Jalaj Chandnani
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

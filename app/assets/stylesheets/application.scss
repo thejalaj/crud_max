@@ -15,6 +15,9 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome";
+ @import "bootstrap";
+
 .flat_left_dob{
   float: left;
   width: 50px;
@@ -45,8 +48,7 @@ select{
 #show_force,#patient_gender{
   display:block!important;
 }
-@import "font-awesome";
-@import "bootstrap";
+
 td,th{
   width: 400px;
 }
