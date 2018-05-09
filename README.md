@@ -6,6 +6,9 @@ update your bundle,
 install postgress, 
 and you are read to go
 
+Uploaded on heroku:
+https://safe-river-16299.herokuapp.com/
+
 Features:
 User can update, edit and delete the patient from the list, 
 proper validation(both front end and back end), 
